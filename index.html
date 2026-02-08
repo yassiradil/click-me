@@ -8,6 +8,7 @@
       background: blue;
 
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -20,12 +21,26 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 200px;
+      display: none; /* مخفية في البداية */
     }
   </style>
 </head>
 <body>
 
-  <button>Omer ya Damaka</button>
+  <button onclick="showImage()">Show Image</button>
+
+  <img id="myImage" src="image.jpg">
+
+  <script>
+    function showImage() {
+      document.getElementById("myImage").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
